@@ -28,3 +28,10 @@ jobs:
     - run: npm install
     - run: npm run build --if-present
     - run: npm test
+
+    - name: Install dependencies
+      run: cd app && npm install
+    - name: Build the app (if applicable)
+      run: cd app && npm run build --if-present
+    - name: Run tests
+      run: cd app && npm test
